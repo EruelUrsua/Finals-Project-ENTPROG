@@ -1,0 +1,48 @@
+﻿@model PatientVM
+
+<h3>Registration</h3>
+
+<form asp-controller="Patient" asp-action="Add" method="post">
+    <label asp-for="Lastname"></label>
+    <input asp-for="Lastname" class="form-control"/>
+    <span asp-validation-for="Lastname" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Firstname"></label>
+    <input asp-for="Firstname" class="form-control" />
+    <span asp-validation-for="Firstname" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Birthday"></label>
+    <input asp-for="Birthday" class="form-control" />
+    <br />
+
+    <label asp-for="Address"></label>
+    <input asp-for="Address" class="form-control">
+    <span asp-validation-for="Address" class="text-danger"></span>
+    <br />
+
+    <label asp-for="ContactNumber"></label>
+    <input asp-for="ContactNumber" class="form-control">
+    <span asp-validation-for="ContactNumber" class="text-danger"></span>
+    <br /><br />
+
+    <label asp-for="Brand"></label>
+    <select asp-for="Brand" class="form-control">
+        <option value="Pfizer">Pfizer</option>
+        <option value="AstraZeneca">AstraZeneca</option>
+        <option value="Moderna">Moderna</option>
+        <option value="Sinovac">Sinovac</option>
+    </select>
+    <span asp-validation-for="Brand" class="text-danger"></span>
+    <br />
+
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">
+        <i class="fas fa-caret-square-left"></i>
+        Back to Home page
+    </a>
+
+    <input type="submit" class="btn btn-success" value="Add Patient" />
+
+
+</form>

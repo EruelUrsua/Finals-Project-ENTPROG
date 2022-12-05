@@ -1,0 +1,50 @@
+﻿@model MedicalVM
+
+<h3>Create a new Schedule</h3>
+
+<form asp-controller="Medical" asp-action="Add" method="post">
+    <label asp-for="Date"></label>
+    <input type="date" asp-for="Date" class="form-control"/>
+    <span asp-validation-for="Date" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Vaccine"></label>
+    <select asp-for="Vaccine" class="form-control">
+        <option value="Pfizer">Pfizer</option>
+        <option value="AstraZeneca">AstraZeneca</option>
+        <option value="Moderna">Moderna</option>
+        <option value="Sinovac">Sinovac</option>
+    </select>
+    <span asp-validation-for="Vaccine" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Location"></label>
+    <input type="text" asp-for="Location" class="form-control">
+    <span asp-validation-for="Location" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Slots"></label>
+    <input type="number" asp-for="Slots" class="form-control">
+    <span asp-validation-for="Slots" class="text-danger"></span>
+    <br /><br />
+    <label asp-for="Time"></label>
+    <input type="time" asp-for="Time" class="form-control">
+    <span asp-validation-for="Time" class="text-danger"></span>
+    <br /><br />
+   
+
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">
+        <i class="fas fa-caret-square-left"></i>
+        Back to Home page
+    </a>
+
+    <input type="submit" class="btn btn-success" value="Add Schedule" />
+
+
+</form>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
